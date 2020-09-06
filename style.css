@@ -102,6 +102,7 @@ button:active {
 }
 
 .footer {
+	margin-top: 15px;
 	color: rgb(175, 172, 172);
 }
 .developer-name {
