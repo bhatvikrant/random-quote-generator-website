@@ -24,11 +24,12 @@ async function getQuote() {
 	// Using a Proxy url to avoid CORS error
 	const proxyUrl = "https://cors-anywhere.herokuapp.com/";
 	const apiUrl =
-		"http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json";
+		"https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json";
 
 	try {
 		const response = await fetch(proxyUrl + apiUrl);
 		const data = await response.json();
+		console.log('data:', { data })
 
 		// If author is blank, set author as "Unknown"
 		if (data.quoteAuthor === "") {
